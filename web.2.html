@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Tech</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header, main, aside, footer {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .formulario {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .linha {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .termos {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        @media (max-width: 500px) {
+            .linha {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Blog Tech</h1>
+    <nav>
+        <a href="#inicio">Início</a> |
+        <a href="#artigos">Artigos</a> |
+        <a href="#inscricao">Inscrição</a>
+    </nav>
+</header>
+
+<main id="inicio">
+    <h2 id="artigos">Artigos</h2>
+
+    <article>
+        <h2>Tecnologia</h2>
+        <p>A tecnologia facilita nossas atividades diárias.</p>
+        <img src="https://placehold.co/300x150" alt="Imagem sobre tecnologia">
+    </article>
+
+    <article>
+        <h2>Inteligência Artificial</h2>
+        <p>A inteligência artificial ajuda a analisar dados.</p>
+        <img src="https://placehold.co/300x150" alt="Imagem sobre inteligência artificial">
+    </article>
+</main>
+
+<aside id="inscricao">
+    <div class="formulario">
+        <h2>Inscreva-se no Blog</h2>
+        <p>Preencha os dados para receber novidades!</p>
+
+        <form method="get">
+            <div class="linha">
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome"
+                           minlength="3" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade"
+                   min="18" max="120" required>
+
+            <label for="assunto">Assunto:</label>
+            <select id="assunto" name="assunto" required>
+                <option value="">Selecione</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="programacao">Programação</option>
+                <option value="ia">Inteligência Artificial</option>
+            </select>
+
+            <div class="termos">
+                <input type="checkbox" id="termos"
+                       name="termos" value="aceito" required>
+                <label for="termos">Aceito os termos</label>
+            </div>
+
+            <button type="submit">Enviar inscrição</button>
+        </form>
+    </div>
+</aside>
+
+<footer>
+    <p>&copy; 2026 Blog Tech</p>
+</footer>
+
+</body>
+</html>
